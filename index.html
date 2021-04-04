@@ -237,16 +237,16 @@
         <aside class="aside">
           <div class="aside-header text">
             <h4 class="h4"><a class="asd-head" href="#0">новые посты </a></h4>
-            <article class='articles'>
+            <section class='articles'>
               <article class="article">
                 <div class="aside-img"> <a href="#0"><img src="image/2.jpg" alt="Пляж" class="aside-image"></a>
                 </div>
                 <div class="aside-text">
                   <time class="card-date aside-date" datetime="2019-06-10">14 июня 2019</time>
-                  <p class="card-tittle text aside-title"><a href="#0">
+                  <h4 class="card-tittle text aside-title"><a href="#0">
                     10 мест, ради которых стоит
                     проснуться</a>
-                  </p>
+                  </h4>
 
                 </div>
               </article>
@@ -255,8 +255,8 @@
                 </div>
                 <div class="aside-text">
                   <time class="card-date aside-date" datetime="2019-06-10">14 июня 2019</time>
-                  <p class="card-tittle text aside-title"><a href="#0">Йога для домашних </a>
-                  </p>
+                  <h4 class="card-tittle text aside-title"><a href="#0">Йога для домашних </a>
+                  </h4>
                 </div>
 
               </article>
@@ -265,7 +265,7 @@
                 </div>
                 <div class="aside-text">
                   <time class="card-date aside-date" datetime="2019-06-10">14 июня 2019</time>
-                  <p class="card-tittle text aside-title"><a href="#0">как мы превратили классное место в балкон</a></p>
+                  <h4 class="card-tittle text aside-title"><a href="#0">как мы превратили классное место в балкон</a></h4>
                 </div>
 
               </article>
@@ -275,7 +275,7 @@
                 </div>
                 <div class="aside-text">
                   <time class="card-date aside-date" datetime="2019-06-10">14 июня 2019</time>
-                  <p class="card-tittle text aside-title"><a href="#0">Кулинарный подход к науке</a></p>
+                  <h4 class="card-tittle text aside-title"><a href="#0">Кулинарный подход к науке</a></h4>
                 </div>
 
               </article>
@@ -284,14 +284,15 @@
                 </div>
                 <div class="aside-text">
                   <time class="card-date aside-date" datetime="2019-06-10">14 июня 2019</time>
-                  <p class="card-tittle text aside-title"><a href="#0">лучшие прически для
-                    распущенных волос</a></p>
+                  <h4 class="card-tittle text aside-title"><a href="#0">лучшие прически для
+                    распущенных волос</a></h4>
                   </div>
 
                 </article>
-              </article>
+              </section>
               <form active="#0" class="form-search">
-                <div class="form-search"><label for="search"><input type="search" class="field" placeholder="Найти..."></label><span id="search" class="screenreaders-text">поле для поиска</span>
+                <div class="form-search"><label for="search"><input type="search" class="field" placeholder="Найти..."></label>
+                  <span id="search" class="screenreaders-text">поле для поиска</span>
                   <div>
                     <button class="form-search-img" type="submit"><span class="screenreaders-text">найти</span> </button>
                   </div>
@@ -435,5 +436,41 @@
                   </div>
                 </div>
               </footer>
+
+
+              <div class="popup_background">
+              <div class="popup">
+                <h2 class="also_header text">Ваш фидбек</h2>
+                <div class="popup_select">
+                  <form active="#0" class="form-select">
+                   <label for="popup_select_field">
+                    <h5 class="popup_select_text">Как часто вы заходите на сайт?</h5>
+                   </label>
+                    <select type="select" class="popup_select_field">
+                      <option value="almost_each_day" class="popup_select_text" >Почти каждый день</option>
+                    </select>
+                  </div>
+                  <div class="popup_radio_box">
+                  <form active="#0" class="form-radio">
+                    <h5 class="popup_radio_question">Вы подписаны на email-рассылку?</h5>
+                    <label for="popup_radio">
+                        <input class="popup_radio" type="radio" checked name="radio_select" id="popup_radio">
+                        <span class="popup_radio_text">Да</span>
+                    </label>
+                    <label for="popup_radio">
+                        <input class="popup_radio" type="radio" name="radio_select" id="popup_radio">
+                        <span class="popup_radio_text">Нет</span>
+                    </label>
+                  </form>
+                </div>
+                  <form active="#0" class="form-popup-textarea">
+                   <label for="popup_textarea">
+                    <h5 class="popup_textarea_text">Расскажите, какой контент вы хотели бы видеть на нашем сайте?</h5>
+                   </label>
+                    <input type="textarea" class="popup_textarea" placeholder="Может, больше рецептов?">
+                    <button class="popup_textarea_button" type="submit">Отправить</button>
+                  </form>
+                    </div>
+                </div>
             </body>
             </html>

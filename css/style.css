@@ -258,12 +258,15 @@ div.content {
 }
 .card {
   display: flex;
+
 }
 article.card:nth-child(n + 2) {
   margin-top: 60px;
 }
 .article-img {
-  width: 381px;
+  max-width: 381px;
+  flex: 1 1 auto;
+  min-width: 323px;
 }
 .card-text {
   display: flex;
@@ -313,13 +316,19 @@ article.card:nth-child(n + 2) {
 .lead-parent {
   margin-top: 25px;
 }
+
+.popup_radio_text,
+.popup_textarea,
+.popup_textarea_text,
+.popup_select_text,
+.popup_textarea_text,
+.popup_radio_question,
 .click_here,
 .goods_about_information,
 .lead {
   font-family: "opensans-regular";
   font-size: 15px;
   line-height: 1.46;
-
   margin: 0;
 }
 .second {
@@ -410,11 +419,13 @@ article.card:nth-child(n + 2) {
   margin-right: 0;
   margin: 0;
 }
+.popup_select_field,
 .form-search {
   display: flex;
   box-sizing: border-box;
   position: relative;
 }
+.popup_select_field,
 .field {
   width: 222px;
   height: 48px;
@@ -448,6 +459,7 @@ h4.form-email-header {
   padding: 0;
   margin: 0;
 }
+
 .form-email-header::after {
   content: "";
   position: absolute;
@@ -477,6 +489,7 @@ h4.form-email-header {
 .form-email-buttun {
   margin-top: 18px;
 }
+.popup_textarea_button,
 .shop_button,
 .email-buttun {
   display: flex;
@@ -488,6 +501,7 @@ h4.form-email-header {
   border: none;
   padding: 0;
 }
+.popup_textarea_button,
 .shop_button_text,
 .email-buttun-text {
   color: white;
@@ -679,7 +693,7 @@ ul.thems-links {
   font-size: 14px;
   text-decoration: line-through;
   margin: 0;
-  line-height: 1.7;\
+  line-height: 1.7;
   padding: 0;
 }
 .goods_price .new{
@@ -753,4 +767,154 @@ ul.thems-links {
   font-family: "opensans-bold";
   color: #e0e0e0;
   font-size: 14px;
+}
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  background-color: black;
+  opacity: 0.5;
+  background-size: cover;
+  z-index: 2;
+  height: 400vh;
+  display: none;
+}
+.popup {
+  position: fixed;
+  content: "";
+  background-color: white;
+  width: 420px;
+  height: 600px;
+  top: 270px;
+  left: 40%;
+  right: 40%;
+  box-sizing: border-box;
+  padding: 40px 30px 40px 30px;
+  object-position: center;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  display: none;
+
+}
+.popup_select {
+  margin-top: 45px;
+  margin-bottom: 20px;
+}
+.popup_select_field {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url(../svg/form-arrows.svg);
+  background-color: #f4f7f6;
+  background-size: 3%;
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+.popup_select_field {
+  width: 100%;
+  margin: 10px 0 0 0;
+  padding: 15px;
+  box-sizing: border-box;
+}
+option > .popup_select_text {
+  color: #bdc0bf;
+}
+
+.popup_radio_box {
+  margin-bottom: 20px;
+  display: block;
+}
+.popup_radio {
+  position:absolute;
+   clip:rect(1px,1px,1px,1px);
+   height:1px;
+   width:1px;}
+  }
+.popup_radio:focus ~.popup_radio_text::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  background-image: url(../svg/form-empty-circle.svg);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 20px;
+}
+.popup_radio:checked ~.popup_radio_text::before{
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  background-image: url(../svg/form-circle.svg);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 20px;
+}
+.popup_radio_text{
+margin-right: 20px;
+padding-left: 20px;
+box-sizing: border-box;
+position: relative;
+
+}
+.popup_textarea{
+  width: 100%;
+  background-color: #f4f7f6;
+  border: none;
+  height: 100px;
+  padding: 15px;
+  box-sizing: border-box;
+}
+.popup_textarea_text {
+  top: 0;
+}
+.popup_textarea_button {
+  width: 100%;
+  margin: 20px 0 20px 0;
+}
+@media (min-width:320px) and (max-width:640px) {
+  .header {
+    background-image: url(../image/banner-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 33px 0px 146px 0px;
+
+    position: relative;
+    z-index: 0;
+    margin-bottom: 64px;
+  }
+  .header-logo {
+    object-position: center;
+  }
+  .heder-tittle {
+    font-size: 26px;
+  }
+
+  .header-list {
+    display: none;
+    position: relative;
+  }
+  .header-list::after {
+    content: "";
+    position: absolute;
+    background-image: url(../svg/form-arrows.svg);
+  }
+  .now_trend_blocks {
+    flex-basis: 1;
+  }
+  .now_trend_card {
+  width: 90%;
+  margin: auto;
+    flex-basis: 100vh;
+  }
+  .card {
+    flex-direction: column;
+    max-width: 90vw;
+    margin: 15px;
+  }
 }
