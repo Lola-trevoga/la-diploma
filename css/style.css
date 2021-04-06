@@ -85,7 +85,7 @@ li.item > a {
   text-align: center;
   font-family: "opensans-bold";
   line-height: 1.6;
-  font-size: 45px;
+  font-size: 2.8125rem;
   color: #ffffff;
 
   display: block;
@@ -93,7 +93,7 @@ li.item > a {
   margin-left: auto;
   margin-right: auto;
 
-  width: 700px;
+  max-width: 700px;
 }
 h1.header-tittle {
   margin: 0;
@@ -266,7 +266,7 @@ article.card:nth-child(n + 2) {
 .article-img {
   max-width: 381px;
   flex: 1 1 auto;
-  min-width: 323px;
+
 }
 .card-text {
   display: flex;
@@ -705,7 +705,8 @@ ul.thems-links {
 .footer {
   margin-left: auto;
   margin-right: auto;
-  width: 1200px;
+  max-width: 1200px;
+  min-width: 90vw;
 }
 .footer-bg {
   background-color: #f4f7f6;
@@ -877,7 +878,10 @@ position: relative;
   width: 100%;
   margin: 20px 0 20px 0;
 }
-@media (min-width:320px) and (max-width:640px) {
+@media (min-width:360px) and (max-width:767px) {
+  html {
+    font-size: 57,77778%;
+  }
   .header {
     background-image: url(../image/banner-mobile.jpg);
     background-repeat: no-repeat;
@@ -889,7 +893,7 @@ position: relative;
     margin-bottom: 64px;
   }
   .header-logo {
-    object-position: center;
+    align-self: center;
   }
   .heder-tittle {
     font-size: 26px;
@@ -904,17 +908,61 @@ position: relative;
     position: absolute;
     background-image: url(../svg/form-arrows.svg);
   }
-  .now_trend_blocks {
-    flex-basis: 1;
+  .now_trend_blocks > ul {
+    display: flex;
+   flex-direction: column;
+  }
+  .now_trend_item {
+    padding: 2px;
   }
   .now_trend_card {
   width: 90%;
   margin: auto;
     flex-basis: 100vh;
   }
+  .content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .aside {
+    margin-left: 0;
+  }
   .card {
     flex-direction: column;
     max-width: 90vw;
     margin: 15px;
+
+  }
+  .article-image {
+    width: 100vw;
+  }
+  .goods_list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .goods_block {
+    justify-content: flex-start;
+  }
+  .good_item:nth-child(2) {
+    margin: 0;
+
+  }
+}
+@media (min-width:767px) and (max-width:1199px) {
+  .header {
+    background-image: url(../image/banner-bg-tablet.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 33px 0px 146px 0px;
+
+    position: relative;
+    z-index: 0;
+    margin-bottom: 64px;
+  }
+  .content {
+    width: 698px;
   }
 }
