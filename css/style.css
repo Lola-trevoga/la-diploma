@@ -58,6 +58,9 @@ body {
   width: 179px;
   height: auto;
 }
+.menu-icon {
+  display: none;
+}
 .header-list {
   display: flex;
   flex-direction: row;
@@ -85,7 +88,7 @@ li.item > a {
   text-align: center;
   font-family: "opensans-bold";
   line-height: 1.6;
-  font-size: 2.8125rem;
+  font-size: 46px;
   color: #ffffff;
 
   display: block;
@@ -893,20 +896,17 @@ position: relative;
     margin-bottom: 64px;
   }
   .header-logo {
-    align-self: center;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    right: 50%;
   }
-  .heder-tittle {
+  .header-tittle {
     font-size: 26px;
   }
-
-  .header-list {
+  ul.header-list {
     display: none;
     position: relative;
-  }
-  .header-list::after {
-    content: "";
-    position: absolute;
-    background-image: url(../svg/form-arrows.svg);
   }
   .now_trend_blocks > ul {
     display: flex;
@@ -976,5 +976,30 @@ position: relative;
   }
   .aside {
     margin-left: 35px;
+  }
+}
+  .header-content {
+    width: 100vw;
+    position: relative;
+  }
+  .burger-menu {
+    position: absolute;
+  }
+  nav.menu-icon {
+      position:relative;
+      display:inline-block;
+      width:60px;
+      text-indent:-999px;
+      height:30px;
+      border-top:10px solid #fff;
+      border-bottom:10px solid #fff;
+    }
+  nav.menu-icon:before {
+      content:"";
+      position:absolute;
+      top:10px;
+      left:0;
+      width:100%;
+      border-top:10px solid #fff;
   }
 }
